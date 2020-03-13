@@ -22,8 +22,6 @@ class ApiHelper: NSObject {
                 return URLSession.shared.rx.data(request: request)
             }.map { data -> T? in
                 return try? JSONDecoder().decode(T.self, from: data)
-                
         }.asObservable()
-        
     }
 }

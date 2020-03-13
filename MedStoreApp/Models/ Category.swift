@@ -17,10 +17,12 @@ struct Category: Decodable {
 }
 
 extension Category {
+    
     static func detailFor(id: String) -> Resource<Category>  {
         let url = URL(string: "http://dummy.restapiexample.com/api/v1/employees/\(id)")!
         return Resource(url: url)
     }
+    
     static var empty: Category {
         return Category(id: "", employee_name: "", employee_salary: "", employee_age: "", profile_image: "")
     }
@@ -29,7 +31,6 @@ extension Category {
 struct Categories: Decodable {
     let data: [Category]
     let status:String
-    
 }
 
 extension Categories {
@@ -42,7 +43,5 @@ extension Categories {
     static var empty: Categories {
         return Categories(data: [Category(id: "", employee_name: "", employee_salary: "", employee_age: "", profile_image: "")], status: "fail")
     }
-    
-    
     
 }

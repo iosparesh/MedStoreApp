@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-          UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         // Do any additional setup after loading the view.
     }
     
